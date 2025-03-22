@@ -6,7 +6,7 @@ import difflib
 import re
 
 
-TOKEN = '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'
+TOKEN = 'seu_codigo'
 
 
 def remover_diff(codigo):

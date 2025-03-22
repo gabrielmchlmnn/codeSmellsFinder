@@ -3,7 +3,7 @@ import requests
 
 ## TESTE COMMIT
 
-TOKEN = "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"
+TOKEN = "seu_codigo"
 
 headers = {
     'Authorization': f'token {TOKEN}'  # Autenticação com token
@@ -19,7 +19,7 @@ response = requests.get(url, headers=headers)
 
 if response.status_code == 200:
     print(response.json())
-    commit_data = response.json()[0]
+    commit_data = response.json()[-1]
     commit_sha = commit_data["sha"]
 
     url = f"https://api.github.com/repos/{owner}/{repo}/commits/{commit_sha}"
